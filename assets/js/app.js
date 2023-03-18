@@ -17,3 +17,23 @@ import AnimateOnPageLinks from "./components/AnimateOnPageLinks";
 //     ReplaceObfuscatedEmailAddresses.init();
 //     AnimateOnPageLinks.init();
 // });
+
+import Alpine from 'alpinejs';
+import intersect from '@alpinejs/intersect';
+Alpine.plugin(intersect); //lazy-loading, infinity loading
+
+import theme from "./components/alpine/theme";
+
+if (typeof window !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', () => {
+        const _load = Promise.resolve(Alpine.start());
+        _load.then(() => {
+            // console.info(started alpine);
+        });
+    })
+
+    document.addEventListener('alpine:init', () => {
+        window.Alpine = Alpine;
+        window.theme = theme;
+    });
+}
