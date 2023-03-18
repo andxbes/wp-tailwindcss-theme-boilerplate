@@ -5,19 +5,28 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
-    purge: {
-        content: [
-            './*.php',
-            './templates/**/*.php',
-            './build/js/**/*.js',
-        ],
-        options: {
-            safelist: [],
-            blocklist: [],
-            keyframes: true,
-            fontFace: true,
-        },
-    },
+    // purge: {
+    //     content: [
+    //         './*.php',
+    //         './templates/**/*.php',
+    //         './build/js/**/*.js',
+    //     ],
+    //     options: {
+    //         safelist: [],
+    //         blocklist: [],
+    //         keyframes: true,
+    //         fontFace: true,
+    //     },
+    // },
+    content: [
+        './*.php',
+        './app/Walkers/*.php',
+        './app/Hooks.php',
+        // './blocks/**/*.php',
+        // './woocommerce/**/*.php',
+        './templates/**/*.php',
+        './build/js/**/*.js',
+    ],
     // darkMode: 'class',
 
     theme: {

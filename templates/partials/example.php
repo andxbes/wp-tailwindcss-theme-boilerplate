@@ -32,5 +32,9 @@
 			</svg>
 			Follow me on Twitter
 		</a>
+		<br />
+		<button
+			class="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium text-blue-600 bg-white border border-transparent rounded-md hover:bg-blue-50 sm:w-auto"
+			@click="modals.demo = true">Show Modal</button>
 	</div>
 </div>

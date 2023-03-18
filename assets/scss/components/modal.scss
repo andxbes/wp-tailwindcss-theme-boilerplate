@@ -1,0 +1,16 @@
+
+$module: '.modal';
+#{$module}{
+  &__title{
+    @apply  text-gray-900 font-medium pr-8 sm:pr-10 mb-2;
+  }
+  &__icon{
+    @apply flex-shrink-0 flex items-center justify-center  rounded-full bg-red-100
+    h-12 w-12
+    sm:h-10 sm:w-10
+    mx-auto  mb-3 sm:mb-0 sm:mr-4  sm:ml-0 ;
+    img,svg{
+      @apply h-6 w-6;
+    }
+  }
+}

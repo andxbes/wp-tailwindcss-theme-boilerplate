@@ -1,0 +1,31 @@
+.content {
+
+
+    iframe {
+        @apply w-full max-w-full;
+    }
+
+    .iframe-wrapper {
+        @apply relative w-full max-w-full aspect-[4/3];
+
+        iframe {
+            @apply absolute inset-0 w-full h-full;
+        }
+    }
+
+    // .aligncenter {
+    //     @apply mx-auto clear-both;
+    // }
+
+    // img {
+    //     @apply rounded-xl lg: rounded-2xl mt-3 mx-2 mb-7 max-w-full;
+
+    //     &.alignleft {
+    //         @apply sm: mr-8;
+    //     }
+
+    //     &.alignright {
+    //         @apply sm: ml-8;
+    //     }
+    // }
+}

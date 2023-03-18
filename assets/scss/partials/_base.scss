@@ -12,3 +12,14 @@ html {
     font-size: 18px;
   }
 }
+
+/* purgecss start ignore */
+[x-cloak] {
+  display: none !important;
+}
+
+.lazy-loading {
+  @apply min-h-25;
+}
+
+/* purgecss end ignore */
