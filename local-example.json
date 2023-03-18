@@ -1,3 +1,8 @@
 {
-  "proxy": "http://localhost/"
+  "proxy": "http://localhost/",
+  // "https": {
+  //   "cert" : "C:\\Users\\andxbes\\PhpstormProjects\\example.com\\docker\\certs\\example.crt",
+  //   "key" : "C:\\Users\\andxbes\\PhpstormProjects\\example.com\\docker\\certs\\example.key"
+  // },
+  "open" : true
 }
