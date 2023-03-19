@@ -46,7 +46,7 @@ if (empty($args['id'])) {
                             class="bg-white rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             @click="modals.<?= esc_attr($args['id']) ?> = false">
                             <span class="sr-only">
-                                <?= __('Close', 'dino') ?>
+                                <?= __('Close', 'theme') ?>
                             </span>
                             <svg class="h-8 w-8 sm:h-10 sm:w-10" x-description="Heroicon name: outline/x"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".75"

@@ -18,7 +18,6 @@ add_action('wp_enqueue_scripts', function () {
 
 function theme_enqueue_style(string $name)
 {
-	//    $deps = array_merge($deps,['dino_base']); //WPO Не объединяет с параметрами ссылки на стили
 	if (!empty($name)) {
 		$name = trim($name, '/');
 		$handle = preg_replace("%[\s\W]%", '-', $name);
