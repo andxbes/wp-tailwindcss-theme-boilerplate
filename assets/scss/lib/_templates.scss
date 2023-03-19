@@ -1,0 +1,162 @@
+//Тут только шаблоны, без классов, так как шаблоны без их расширения ( @extend ... ) не компилятся в правила
+%rounded-inhirit{
+  border-radius: inherit;
+}
+%border-d_player{
+  @apply relative z-20 w-full h-full
+  border-white dark:border-gray-700  border-4 lg:border-[15px] rounded-2xl lg:rounded-3xl
+  shadow-[0_20px_40px_0_rgba(3,0,77,0.06)];
+}
+
+%clock-block{
+  @apply relative
+    flex
+  items-center text-center  text-sm font-normal
+  text-gray-600
+  before:mr-1 before:w-5 before:h-5
+  before:bg-[url("/wp-content/themes/dino/assets/images/icons/post/clock.svg")]
+  before:bg-no-repeat
+  ;
+}
+
+%first-letter{
+  &::first-letter {
+    @apply font-bold float-left
+    mr-2
+    leading-[.75]
+    text-[11rem]
+    text-[#e85f43]
+    ;
+    //color: var(--ccc, #e85f43)
+  }
+}
+
+%table_basic {
+  @apply w-full;
+  tr {
+    @apply rounded-2xl border-separate border-[5px] border-gray-100 bg-gray-200;
+    td:first-of-type {
+      @apply rounded-l-2xl;
+    }
+
+    td:last-of-type {
+      @apply rounded-r-2xl;
+    }
+  }
+
+  thead tr,
+  th {
+    @apply bg-blue-450 text-white rounded-none;
+  }
+
+  td, th {
+    @apply text-lg border-none;
+  }
+
+  td {
+    @apply p-5 ;
+  }
+
+  th {
+    @apply font-bold p-1;
+  }
+
+
+}
+
+%ul{
+  //@apply my-1 table;
+  //li{
+  //  @apply relative leading-9;
+  //  @apply
+  //   mt-1 pl-8;
+  //  @apply before:bg-no-repeat before:inline-block before:absolute
+  //  before:top-[.75em]
+  //  before:left-2
+  //  before:bg-[url("/wp-content/themes/dino/assets/images/icons/list/blue.svg")]  before:bg-cover before:h-2.5 before:w-3;
+  //}
+  //ul,ol{
+  //  @apply my-0;
+  //}
+ @apply pl-6 my-2;
+  list-style-image:url(/wp-content/themes/dino/assets/images/icons/list/blue.svg);
+
+  li + li{
+    @apply mt-1;
+  }
+
+}
+
+%ol{
+  @apply pl-6 list-decimal my-2;
+  li + li{
+    @apply mt-1;
+  }
+}
+
+%hidden{
+  @apply hidden;
+}
+%add_to_cart{
+  @apply rounded-full font-semibold border-2 flex gap-2 justify-center items-center select-none;
+  @apply  text-xs md:text-sm py-2 px-4;
+  @apply  bg-yellow-500 border-yellow-500 text-white dark:bg-blue-400 dark:border-blue-400;
+}
+
+%plus_button {
+
+  @apply inline-flex bg-blue-150 dark:bg-gray-200
+  rounded-xl p-2;
+
+  & > .plus__img {
+
+    @apply h-7 w-7 flex items-center justify-center relative
+
+    after:content-[''] before:content-[''] before:absolute after:flex
+    before:w-[22px] before:h-[4px] after:h-[22px] after:w-[4px]
+    before:flex after:flex before:flex before:rounded-md after:rounded-md
+    before:bg-blue-450 after:bg-blue-450
+    dark:before:bg-yellow-700 dark:after:bg-yellow-700
+    after:ease-out after:duration-300 after:opacity-100;
+    &--opened {
+      @apply after:rotate-90 after:opacity-0;
+    }
+  }
+}
+
+%last_of_type_mb-0{
+  &:last-of-type{
+    @apply mb-0;
+  }
+}
+
+%d_sticky{
+  @apply sticky overflow-y-auto max-h-[calc(100vh-40px)];
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+%object-cover-not-fullscreen{
+  @apply object-cover;
+  &:fullscreen{
+    @apply object-contain;
+  }
+}
+
+%input_number_like_text_number{
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  &[type='number'] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}

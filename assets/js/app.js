@@ -23,6 +23,7 @@ import intersect from '@alpinejs/intersect';
 Alpine.plugin(intersect); //lazy-loading, infinity loading
 
 import theme from "./components/alpine/theme";
+import accordions from "./components/alpine/accordions";
 
 if (typeof window !== 'undefined') {
     window.addEventListener('DOMContentLoaded', () => {
@@ -35,5 +36,6 @@ if (typeof window !== 'undefined') {
     document.addEventListener('alpine:init', () => {
         window.Alpine = Alpine;
         window.theme = theme;
+        window.accordions = accordions;
     });
 }
